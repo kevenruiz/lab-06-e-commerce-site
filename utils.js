@@ -15,12 +15,13 @@ export function createPosterLi(hogwards) {
     pDescription.textContent = hogwards.description;
 
     const image = document.createElement('img');
+    image.classList.add('image');
 
     image.src = hogwards.image;
 
     const pHouse = document.createElement('p');
 
-    pHouse.classList.createElement('p');
+    pHouse.classList.add('p');
     pHouse.textContent = hogwards.house;
 
     const pIsDeathEater = document.createElement('p');
@@ -29,20 +30,19 @@ export function createPosterLi(hogwards) {
 
     const pCategory = document.createElement('p');
 
-    pCategory.classList.createElement('p');
+    pCategory.classList.add('p');
     pCategory.textContent = hogwards.category;
 
     const pPrice = document.createElement('p');
-
-    pPrice.textContent = hogwards.price.toLocalString('en-US', {
+    pPrice.textContent = hogwards.price.toLocaleString('en-US', {
         style: 'currency',
         currency: 'USD',
     });
-    const button = document.createElement(button);
+    const button = document.createElement('button');
 
     button.textContent = 'Add poster to Cart';
 
-    li.append(pName, pDescription, image, pHouse, pIsDeathEater, pCategory, pPrice);
+    li.append(pName, pDescription, image, pHouse, pIsDeathEater, pCategory, pPrice, button);
 
     return li;
 
