@@ -2,6 +2,7 @@
 
 export const hogwards = [
     {
+        id: 1,
         name: 'Harry Potter',
         image: '../assets/harrypotterposter.jpg',
         description: 'Harry Poster',
@@ -12,7 +13,7 @@ export const hogwards = [
     },
 
     {
-
+        id: 2,
         name: 'Hermoine Granger',
         image: '../assets/hermoinegrangerposter.jpg',
         description: 'Hermoine Poster',
@@ -23,7 +24,7 @@ export const hogwards = [
     },
 
     {
-
+        id: 3,
         name: 'Ronald Wesley',
         image: '../assets/RonaldWesleyposter.jpg',
         description: '',
@@ -33,7 +34,7 @@ export const hogwards = [
         price: '9',
     },
     {
-
+        id: 4,
         name: 'Luna Lovegood',
         image: '../assets/lunalovegoodposter.jpg',
         description: '',
@@ -43,7 +44,7 @@ export const hogwards = [
         price: '8',
     },
     {
-
+        id: 5,
         name: 'Draco Malfoy',
         image: '../assets/draco malfoy poster.jpg',
         description: '',
@@ -53,7 +54,7 @@ export const hogwards = [
         price: '8',
     },
     {
-
+        id: 6,
         name: 'Severus Snape',
         image: '../assets/severussnapeposter.jpg',
         description: '',
