@@ -10,6 +10,7 @@ export const hogwards = [
         category: 'Poster',
         price: '10',
     },
+
     {
 
         name: 'Hermoine Granger',
@@ -20,6 +21,7 @@ export const hogwards = [
         category: 'Poster',
         price: '9',
     },
+
     {
 
         name: 'Ronald Wesley',
