@@ -46,7 +46,36 @@ export function createPosterLi(hogwards) {
 
     return li;
 
+
+
 }
+
+
+export function createTableRow(somePoster, someHogwards) {
+    const tr = document.createElement('tr)');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = someHogwards.name;
+    tdQuantity.textContent = somePoster.quantity;
+    const total = someHogwards.price * somePoster.quantity;
+
+
+
+    const config = {
+        currency: 'USD',
+        style: 'currency'
+    };
+
+    //const totalAsUSD = `$${total}.00`;
+
+    tdPrice.textContent = totalAsUSD;
+
+
+
+
+
 
 
 
