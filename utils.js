@@ -70,16 +70,5 @@ export function createTableRow(somePoster, someHogwards) {
 
     //const totalAsUSD = `$${total}.00`;
 
-    tdPrice.textContent = totalAsUSD;
-
-
-
-
-
-
-
-
-
-
-
-
+    //tdPrice.textContent = totalAsUSD;
+}
