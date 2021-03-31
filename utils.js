@@ -19,7 +19,7 @@ export function createPosterLi(hogwards) {
 
     image.src = hogwards.image;
 
-    const pHouse = document.createElement('p');
+    const pHouse = document.creatAeElement('p');
 
     pHouse.classList.add('p');
     pHouse.textContent = hogwards.house;
