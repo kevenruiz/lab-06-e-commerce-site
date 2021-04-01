@@ -22,7 +22,7 @@ export const cart = [
     {
         id: 6,
         quatity: 1
-    }
+    },
 
 
 

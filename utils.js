@@ -71,33 +71,30 @@ export function createTableRow(somePoster, someHogwards) {
 
 
 
+   // const totalAsUSD = `$${total}.00`;
     const config = {
         currency: 'USD',
         style: 'currency'
     };
 
-    //const totalAsUSD = `$${total}.00`;
-
-    //tdPrice.textContent = totalAsUSD;
     const totalAsUSD = total.toLocaleString('en-US', config);
 
     tdPrice.textContent = totalAsUSD;
 
     tr.append(tdName, tdQuantity, tdPrice);
-    
+
     return tr;
 }
+
 
 export function createTotalRow(cartArray, hogwardsArray) {
     let sum = 0;
 
     for (let cartItem of cartArray) {
-        // multiply the price of specific digimon by quantity
+        
         const matchingHogwards = findById(hogwardsArray, cartItem.id);
 
         const lineItem = matchingHogwards.price * cartItem.quantity;
-
-        
         sum = sum + lineItem;
     }
 
