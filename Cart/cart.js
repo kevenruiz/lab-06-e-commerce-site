@@ -9,10 +9,22 @@ import { createTableRow, createTotalRow, findById } from '../utils.js';
 const table = document.querySelector('table');
 
 for (let cartItem of cart) {
+    const matchingHogwards = findById(hogwards, cartItem.id);
 
+    
+ 
+    const tr = createTableRow(cartItem, matchingHogwards);
+    // and append that tr to the table
 
-
-
-
-
+    table.append(tr);
 }
+
+const totalRow = createTotalRow(cart, hogwards);
+
+table.append(totalRow);
+
+
+
+
+
+
