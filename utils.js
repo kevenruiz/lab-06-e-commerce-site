@@ -6,6 +6,8 @@ export function findById(someArray, someId) {
     }
 }
 
+
+
 export function createPosterLi(hogwards) {
     const li = document.createElement('li');
 
@@ -110,3 +112,13 @@ export function createTotalRow(cartArray, hogwardsArray) {
     
     return tr;
 }
+
+export function calcItemTotal(price, quantity) {
+    return price * quantity;
+}
+
+/*export function calcOrderTotal() {
+    for (let totalItems of calcItemTotal)
+        return totalItems;
+}
+*/

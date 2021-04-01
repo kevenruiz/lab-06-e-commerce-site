@@ -1,16 +1,17 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { calcItemTotal } from '../utils.js';
+
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('Calculate items subtotal', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
+    const expected = 60;
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = false;
+    const actual = calcItemTotal(10, 6);
 
     //Expect
     // Make assertions about what is expected versus the actual result
