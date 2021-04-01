@@ -5,7 +5,7 @@ export const cart = [
     },
     {
         id: 2,
-        quatity: 5
+        quantity: 5
     },
     {
         id: 3,
@@ -13,7 +13,7 @@ export const cart = [
     },
     {
         id: 4,
-        quatity: 3
+        quantity: 3
     }, 
     {
         id: 5,
@@ -21,7 +21,7 @@ export const cart = [
     },
     {
         id: 6,
-        quatity: 1
+        quantity: 1
     },
 
 
