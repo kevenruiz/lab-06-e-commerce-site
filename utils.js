@@ -124,16 +124,10 @@ export function calcOrderTotal(cartItem) {
     let total = 0;
     for (let i=0; i < cartItem.length; i++) {
         const item = cartItem[i];
-       // console.log(item, 'item');
         const cartObject = findById(hogwards, item.id)
-       // console.log(item.id);
         const itemTotal = item.quantity * cartObject.price;
-        //console.log(item.quantity)
-      //  console.log(cartObject.price)
-       //console.log(cartObject)
-        
         total += itemTotal;
-       // console.log(total)
+      
     }
 
 
