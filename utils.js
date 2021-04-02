@@ -1,3 +1,5 @@
+import { hogwards } from './product-poster.js';
+
 export function findById(someArray, someId) {
     for (let item of someArray) {
         if (item.id === someId) {
@@ -117,8 +119,23 @@ export function calcItemTotal(price, quantity) {
     return price * quantity;
 }
 
-/*export function calcOrderTotal() {
-    for (let totalItems of calcItemTotal)
-        return totalItems;
+
+export function calcOrderTotal(cartItem) {
+    let total = 0;
+    for (let i=0; i < cartItem.length; i++) {
+        const item = cartItem[i];
+       // console.log(item, 'item');
+        const cartObject = findById(hogwards, item.id)
+       // console.log(item.id);
+        const itemTotal = item.quantity * cartObject.price;
+        //console.log(item.quantity)
+      //  console.log(cartObject.price)
+       //console.log(cartObject)
+        
+        total += itemTotal;
+       // console.log(total)
+    }
+
+
+    return total;
 }
-*/
