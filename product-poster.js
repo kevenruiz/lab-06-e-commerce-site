@@ -11,7 +11,7 @@ export const hogwards = [
         category: 'Poster',
         price: '10',
     },
-
+   
     {
         id: 2,
         name: 'Hermoine Granger',

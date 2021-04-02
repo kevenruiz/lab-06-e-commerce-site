@@ -1,6 +1,8 @@
 // IMPORT MODULES under test here:
-import { calcItemTotal, calcOrderTotal } from '../utils.js';
+import { calcItemTotal, calcOrderTotal, findById } from '../utils.js';
 import { cart } from '../Cart/cart-data.js';
+import { hogwards } from '../product-poster.js';
+
 
 
 
@@ -35,3 +37,27 @@ test('Calculate total items', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('my find by ID function work', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = {
+        id: 1,
+        name: 'Harry Potter',
+        image: '../assets/harrypotterposter.jpg',
+        description: 'Harry Poster',
+        house: 'Griffindor',
+        isDeathEater: true,
+        category: 'Poster',
+        price: '10',
+    };
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(hogwards, expected.id);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
