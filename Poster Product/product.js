@@ -7,6 +7,7 @@ console.log(hogwards);
 
 const ul = document.querySelector('#product-list');
 
+
 for (let hogs of hogwards) {
     // for every Hogwards member render an Li
 

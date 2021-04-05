@@ -1,4 +1,5 @@
-import { hogwards } from './product-poster.js';
+//import { hogwards } from './product-poster.js';
+import { addItemToCart } from './Local-storage-page/loca-storage-utils.js';
 
 export function findById(someArray, someId) {
     for (let item of someArray) {
@@ -12,6 +13,7 @@ export function findById(someArray, someId) {
 
 export function createPosterLi(hogwards) {
     const li = document.createElement('li');
+    
 
     li.classList.add('hogwards');
     li.style.background = hogwards.color;
@@ -54,7 +56,12 @@ export function createPosterLi(hogwards) {
 
     button.textContent = 'Add poster to Cart';
 
+    button.addEventListener('click', () => {
+        addItemToCart(hogwards.id);
+    });
+
     li.append(pName, pDescription, image, pHouse, pIsDeathEater, pCategory, pPrice, button);
+    
 
     return li;
 
@@ -90,7 +97,6 @@ export function createTableRow(somePoster, someHogwards) {
     return tr;
 }
 
-
 export function createTotalRow(cartArray, hogwardsArray) {
     let sum = 0;
 
@@ -114,12 +120,9 @@ export function createTotalRow(cartArray, hogwardsArray) {
     
     return tr;
 }
-
 export function calcItemTotal(price, quantity) {
     return price * quantity;
 }
-
-
 export function calcOrderTotal(cartItem) {
     let total = 0;
     for (let i=0; i < cartItem.length; i++) {
