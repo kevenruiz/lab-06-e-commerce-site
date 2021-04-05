@@ -7,7 +7,7 @@ import { hogwards } from '../product-poster.js';
 
 //import { cart } from './cart-data.js';
 import { createTableRow, createTotalRow, findById } from '../utils.js';
-const cart = getCart(); cd
+const cart = getCart();
 
 // I need my table from the DOM
 
@@ -25,7 +25,17 @@ const totalRow = createTotalRow(cart, hogwards);
 
 table.append(totalRow);
 
+const button = document.querySelector('#finish-cart');
+if (cart.length > 0) button.disabled = false;
+else button.disabled = true;
 
+button.addEventListener('click', () => {
+    const cart = getCart();
+    alert(JSON.stringify(cart));
+    localStorage.clear();
+    window.location = '/';
+
+});
 
 
 
