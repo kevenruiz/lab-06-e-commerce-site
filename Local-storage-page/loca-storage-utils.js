@@ -1,11 +1,11 @@
-import { findById } from '../utils.js'
+import { findById } from '../utils.js';
 // this is a mgic string that should live in a constant. 
 const CART = 'CART';
 
 export function getCart() {
     const stringyCart = localStorage.getItem('CART');
     const parsedCart = JSON.parse(stringyCart);
-    if (!parsedCart) return []
+    if (!parsedCart) return [];
     else return parsedCart;
 
 }
@@ -20,7 +20,7 @@ export function addItemToCart(productId) {
     const cart = getCart();
 
     const matchingItem = findById(cart, productId);
-    console.log(cart)
+    console.log(cart);
 
     if (matchingItem) {
         // if so, increment the quantity of that item

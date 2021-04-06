@@ -1,4 +1,4 @@
-import { getCart } from '../Local-storage-page/loca-storage-utils.js'
+import { getCart } from '../Local-storage-page/loca-storage-utils.js';
 // i need my posters data
 import { hogwards } from '../product-poster.js';
 // LOOP THOUGHT LOCAL STORAGE INSTAD OF js FILE. 
