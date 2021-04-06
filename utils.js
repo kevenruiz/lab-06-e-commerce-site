@@ -1,4 +1,4 @@
-//import { hogwards } from './product-poster.js';
+import { hogwards } from './product-poster.js';
 import { addItemToCart } from './Local-storage-page/loca-storage-utils.js';
 
 export function findById(someArray, someId) {
@@ -125,9 +125,9 @@ export function calcItemTotal(price, quantity) {
 }
 export function calcOrderTotal(cartItem) {
     let total = 0;
-    for (let i=0; i < cartItem.length; i++) {
+    for (let i = 0; i < cartItem.length; i++) {
         const item = cartItem[i];
-        const cartObject = findById(hogwards, item.id)
+        const cartObject = findById(hogwards, item.id);
         const itemTotal = item.quantity * cartObject.price;
         total += itemTotal;
       
